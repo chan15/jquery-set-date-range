@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Set Date Range</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="jquery.set-date-range.js"></script>
+   <script>
+    $(function() {
+        $('#btn_today').setDateRange({
+            type: 'today',
+            from: '#start_date',
+            to: '#end_date'
+        });
+
+        $('#btn_week').setDateRange({
+            type: 'week',
+            from: '#start_date',
+            to: '#end_date'
+        });
+
+        $('#btn_month').setDateRange({
+            type: 'month',
+            from: '#start_date',
+            to: '#end_date'
+        });
+    });
+   </script>
+</head>
+<body>
+    <input type="text" id="start_date">
+    <input type="text" id="end_date">
+    <button id="btn_today">today</button>
+    <button id="btn_week">this week</button>
+    <button id="btn_month">this month</button>
+</body>
+</html>
